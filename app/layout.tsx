@@ -1,12 +1,7 @@
 import FooterComponent from "@/components/footer";
 import HeaderComponent from "@/components/header";
-import localFont from "next/font/local";
 import { Metadata } from "next/types";
 import "./globals.css";
-const myFont = localFont({
-  src: "../public/HousttelySignature-GOonZ.ttf",
-  variable: "--font-house",
-});
 
 export const metadata: Metadata = {
   title: "Bruno Truong",
@@ -20,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body data-barba="wrapper">
-        <div className="content_container">
+      <body>
+        <div>
           <HeaderComponent />
           {children}
           <FooterComponent />
